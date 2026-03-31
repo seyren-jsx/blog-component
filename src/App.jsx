@@ -1,44 +1,34 @@
-import "./App.css";
 import BlogImage from "./assets/illustration-article.svg";
 import UserProfile from "./assets/image-avatar.webp";
 
 const App = () => {
   return (
-    <main id="blog-main" className="blog-main">
-      <article id="card" className="card">
+    <main className="grid min-h-screen w-full place-items-center bg-yellow-main p-6">
+      <article className="flex w-full max-w-sm flex-col gap-4 rounded-2xl border border-black bg-white-main p-6 shadow-[6px_6px_0_0_#000]">
         <img
-          id="card-illustration"
           src={BlogImage}
           alt="Article illustration"
-          className="card-illustration"
+          className="block w-full rounded-xl"
         />
 
-        <div id="article-badge" className="article-badge">
-          <p id="article-badge-text" className="article-badge-text">
-            Learning
-          </p>
+        <div className="self-start rounded bg-yellow-main px-3 py-1">
+          <p className="text-sm font-extrabold">Learning</p>
         </div>
-        <p id="article-date" className="article-date">
-          Published 21 Dec 2023
-        </p>
-        <h1 id="article-title" className="article-title">
-          Html & CSS foundations
+
+        <p className="text-sm text-gray-950">Published 21 Dec 2023</p>
+
+        <h1 className="text-2xl font-extrabold leading-tight text-gray-950">
+          HTML &amp; CSS foundations
         </h1>
-        <p id="article-description" className="article-description">
-          These languages are the backbone of every website; defining structure,
+
+        <p className="text-base leading-relaxed text-gray-500">
+          These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
 
-        <div id="article-user-badge" className="article-user-badge">
-          <img
-            id="user-profile"
-            className="user-profile"
-            src={UserProfile}
-            alt="User avatar"
-          />
-          <p id="user-name" className="user-name">
-            Greg Hooper
-          </p>
+        <div className="flex items-center gap-3 pt-2">
+          <img src={UserProfile} alt="Greg Hooper avatar" className="h-8 w-8" />
+          <p className="text-sm font-extrabold text-gray-950">Greg Hooper</p>
         </div>
       </article>
     </main>

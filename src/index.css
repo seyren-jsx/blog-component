@@ -9,3 +9,22 @@
   --color-gray-500: hsl(0, 0%, 42%);
   --color-gray-950: hsl(0, 0%, 7%);
 }
+
+@layer base {
+  html,
+  body,
+  #root {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+  }
+
+  body {
+    font-family: var(--font-display);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
